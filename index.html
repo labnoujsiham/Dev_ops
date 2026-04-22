@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ReclaNova - Votre Voix Compte</title>
+  <meta name="description" content="Centralisez, traitez et suivez vos réclamations plus facilement que jamais avec ReclaNova.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css" >
+   <link href="https://fonts.googleapis.com/css2?family=Praise&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+    <div class="container">
+      <a class="navbar-brand" href="#" aria-label="ReclaNova Home">
+        Recla<span class="text-info">Nova</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" 
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#accueil">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">À propos</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <div class="ms-lg-3 d-none d-lg-block">
+          <a href="connexion/connexion.php" class="btn btn-info px-4 py-2">Se connecter</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header id="accueil" class="hero-section">
+    <canvas id="particles"></canvas>
+    <div class="hero-overlay"></div>
+    <i class="bi bi-megaphone-fill hero-icon"></i>
+
+    <div class="container hero-content">
+      <div class="row">
+        <div class="col-lg-8 col-xl-7">
+          <h1 class="hero-title">
+            Votre voix<span>compte</span>
+          </h1>
+          <p class="lead mt-4">
+            Centralisez, traitez et suivez vos réclamations plus facilement que jamais.
+          </p>
+          <a href="connexion/connexion.php" class="btn btn-gradiant mt-4">
+            Créer un compte
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="divider"></div>
+  </div>
+
+  <section id="about" class="about-section">
+    <i class="bi bi-graph-up-arrow about-icon-bg about-icon-1"></i>
+    <i class="bi bi-chat-dots about-icon-bg about-icon-2"></i>
+    <div class="container text-center" style="position: relative; z-index: 1;">
+      <h2 class="mb-4">À propos de ReclaNova</h2>
+      <p class="mx-auto" style="max-width:900px;">
+        ReclaNova est une plateforme dédiée à la gestion intelligente des réclamations :
+        centralisation, automatisation et traçabilité pour améliorer l'efficacité et la satisfaction.
+      </p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card card-1 shadow-sm">
+            <i class="bi bi-lightning-charge-fill feature-icon"></i>
+            <p>Les réclamations sont traitées automatiquement selon vos règles — gain de temps.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card card-2 shadow-sm">
+            <i class="bi bi-eye-fill feature-icon"></i>
+            <p>Chaque étape est traçable en temps réel — transparence et contrôle pour vos réclamations.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card card-3 shadow-sm">
+            <i class="bi bi-collection-fill feature-icon"></i>
+            <p>Centralisation des réclamations — organisation et prise de décision rapide.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5>ReclaNova</h5>
+          <p class="small">
+            Réinventer la gestion des réclamations avec une solution rapide et intelligente.
+          </p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Liens rapides</h5>
+          <ul>
+            <li><a href="#accueil" style="color: inherit; text-decoration: none;">Accueil</a></li>
+            <li><a href="#about" style="color: inherit; text-decoration: none;">À propos</a></li>
+            <li><a href="#contact" style="color: inherit; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Médias</h5>
+          <ul>
+            <li>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                <i class="bi bi-twitter me-2"></i> Twitter
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                <i class="bi bi-instagram me-2"></i> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                <i class="bi bi-facebook me-2"></i> Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-4 pt-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+        <p class="small mb-0">&copy; 2024 ReclaNova. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+(function() {
+  const nav = document.querySelector('.custom-nav');
+  let ticking = false;
+
+  function updateNav() {
+    if (window.scrollY > 60) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+    ticking = false;
+  }
+
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateNav);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', requestTick, { passive: true });
+  updateNav();
+})();
+
+(function() {
+  const featureCards = document.querySelectorAll('.feature-card');
+  let ticking = false;
+
+  function reveal() {
+    featureCards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight - 100;
+      if (isVisible) {
+        card.classList.add('show');
+      }
+    });
+    ticking = false;
+  }
+
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(reveal);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', requestTick, { passive: true });
+  window.addEventListener('load', reveal);
+  reveal();
+})();
+
+(function() {
+  const canvas = document.getElementById('particles');
+  if (!canvas) return;
+  
+  const ctx = canvas.getContext('2d', { alpha: true });
+  let w, h, particles = [];
+  
+  function init() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = document.querySelector('.hero-section').offsetHeight || window.innerHeight;
+    
+    particles = [];
+    const COUNT = Math.min(80, Math.floor(w / 15));
+    
+    for (let i = 0; i < COUNT; i++) {
+      particles.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 2 + 0.5,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        alpha: 0.3 + Math.random() * 0.7
+      });
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, w, h);
+
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      
+      if (p.x < -10) p.x = w + 10;
+      if (p.x > w + 10) p.x = -10;
+      if (p.y < -10) p.y = h + 10;
+      if (p.y > h + 10) p.y = -10;
+
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle = 'rgba(180, 230, 255, 0.9)';
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const a = particles[i];
+        const b = particles[j];
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        
+        if (dist < 120) {
+          ctx.globalAlpha = 0.08 * (1 - dist / 120);
+          ctx.strokeStyle = 'rgba(180, 230, 255, 1)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(animate);
+  }
+
+  window.addEventListener('resize', init);
+  init();
+  animate();
+})();
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href !== '#' && href !== '') {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        const offset = 80;
+        const targetPosition = target.offsetTop - offset;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+        
+        const navCollapse = document.querySelector('.navbar-collapse');
+        if (navCollapse && navCollapse.classList.contains('show')) {
+          bootstrap.Collapse.getInstance(navCollapse)?.hide();
+        }
+      }
+    }
+  });
+});
+  </script>
+</body>
+</html>

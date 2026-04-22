@@ -1,0 +1,253 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Afacad', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            margin-left: 240px;
+        }
+
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 30px;
+            padding: 50px 45px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #45AECC, #614AA9);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            background: linear-gradient(90deg, #1F94B5, #614AA9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 28px;
+        }
+
+        .form-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .form-label i {
+            color: #45AECC;
+            font-size: 18px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #e8e8e8;
+            border-radius: 12px;
+            font-size: 15px;
+            font-family: 'Afacad', sans-serif;
+            transition: all 0.3s ease;
+            background-color: #fafbfc;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #45AECC;
+            background-color: white;
+            box-shadow: 0 0 0 4px rgba(69, 174, 204, 0.1);
+        }
+
+        .form-input::placeholder {
+            color: #bbb;
+        }
+
+        /* Select Dropdown */
+        .select-wrapper {
+            position: relative;
+        }
+
+        .select-wrapper select {
+            appearance: none;
+            cursor: pointer;
+            padding-right: 45px;
+        }
+
+        .select-wrapper i {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #45AECC;
+            font-size: 22px;
+            pointer-events: none;
+        }
+
+        /* Textarea */
+        textarea.form-input {
+            resize: vertical;
+            min-height: 140px;
+            font-family: 'Afacad', sans-serif;
+        }
+
+        /* File Input Custom */
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-input-wrapper input[type="file"] {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .file-input-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 18px;
+            border: 2px dashed #45AECC;
+            border-radius: 12px;
+            background-color: #f0f9fc;
+            color: #13708B;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-input-label:hover {
+            background-color: #e5f5fa;
+            border-color: #3a9bb5;
+        }
+
+        .file-input-label i {
+            font-size: 22px;
+        }
+
+        .file-name {
+            margin-top: 8px;
+            font-size: 13px;
+            color: #666;
+            padding-left: 5px;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(90deg, #1F94B5, #614AA9);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 35px;
+            box-shadow: 0 6px 20px rgba(31, 148, 181, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(31, 148, 181, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, #e8f6ff 0%, #f0f4ff 100%);
+            border-left: 4px solid #45AECC;
+            padding: 15px 18px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .info-box i {
+            color: #13708B;
+            font-size: 22px;
+            margin-top: 2px;
+        }
+
+        .info-box p {
+            color: #13708B;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                margin-left: 0;
+                padding: 20px 15px;
+            }
+
+            .form-wrapper {
+                padding: 35px 25px;
+                border-radius: 20px;
+            }
+
+            .form-header h1 {
+                font-size: 24px;
+            }
+
+            .form-input {
+                padding: 12px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-wrapper {
+                padding: 30px 20px;
+            }
+
+            .form-header h1 {
+                font-size: 22px;
+            }
+
+            .submit-btn {
+                padding: 14px;
+                font-size: 16px;
+            }
+        }
+  

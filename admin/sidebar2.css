@@ -1,0 +1,261 @@
+
+body {
+    font-family: 'Afacad', sans-serif;
+    font-weight: lighter;
+    background-color: #F8F9FA;
+}
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: white;
+    border-right: 1px solid #e8e8e8;
+    padding: 25px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: left 0.35s ease;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.logo h2 {
+    font-family: 'Praise', cursive;
+    font-weight: normal;
+    font-size: 34px;
+    margin: 0;
+}
+
+.logo .recla {
+    color: #45AECC;
+}
+
+.logo .nova {
+    color: #000;
+}
+
+.sidebar-divider {
+    height: 1px;
+    background: #e8e8e8;
+    margin: 15px 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.menu-item {
+    padding: 8px 20px;
+    margin-bottom: 5px;
+}
+
+.menu-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu-item a i {
+    font-size: 22px;
+    margin-right: 12px;
+    color: #45AECC;
+    transition: all 0.3s ease;
+}
+
+.menu-item a:hover {
+    background: #f0f9fc;
+    color: #13708B;
+    transform: translateX(5px);
+}
+
+.menu-item a:hover i {
+    color: #13708B;
+}
+
+.menu-item.active a {
+    background: linear-gradient(135deg, #45AECC, #3a9bb5);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(69, 174, 204, 0.3);
+}
+
+.menu-item.active a i {
+    color: #fff;
+}
+
+.logout a i,
+.logout a span {
+    color: #e74c3c !important;
+}
+
+.logout a:hover {
+    background: #fcebea;
+}
+
+.logout a:hover i,
+.logout a:hover span {
+    color: #c0392b !important;
+}
+
+.sidebar-footer {
+    padding: 15px 20px;
+    text-align: center;
+    border-top: 1px solid #e8e8e8;
+    margin-top: auto;
+}
+
+.sidebar-footer p {
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    z-index: 1001;
+    background: white;
+    border: 2px solid #45AECC;
+    border-radius: 8px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.menu-toggle:hover {
+    background: #45AECC;
+    transform: scale(1.05);
+}
+
+.menu-toggle i {
+    font-size: 26px;
+    color: #45AECC;
+    transition: 0.3s;
+}
+
+.menu-toggle:hover i {
+    color: white;
+}
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    backdrop-filter: blur(2px);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        left: -260px;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar-overlay {
+        display: block;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.35s ease;
+    }
+
+    .sidebar.open ~ .sidebar-overlay {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-item a {
+        justify-content: flex-start;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 280px;
+        left: -300px;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+        top: 18px;
+        left: 12px;
+    }
+
+    .menu-toggle i {
+        font-size: 24px;
+    }
+
+    .logo h2 {
+        font-size: 30px;
+    }
+
+    .menu-item a {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .menu-item a i {
+        font-size: 20px;
+    }
+}
+
+.logo-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+.menu::-webkit-scrollbar-thumb:hover {
+    background: #45AECC;
+}
