@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+
+  app:
+    build: .
+    container_name: devops_app
+    ports:
+      - "8080:80"
+    environment:
+      DB_HOST: db
+      DB_NAME: gestion_reclamations
+      DB_USER: devops_user
+      DB_PASS: devops_pass
+    depends_on:
+      - db
+    networks:
+      - devops_network
+
+  db:
+    image: mysql:8.0
+    container_name: devops_db
+    environment:
+      MYSQL_DATABASE: gestion_reclamations
+      MYSQL_USER: devops_user
+      MYSQL_PASSWORD: devops_pass
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - devops_network
+
+volumes:
+  db_data:
+
+networks:
+  devops_network:
+    driver: bridge
