@@ -13,6 +13,7 @@ header('Content-Type: application/json');
 
 try {
     require_once 'db_config.php';
+    require_once 'auth_helpers.php';
 } catch (Exception $e) {
     error_log("Failed to load db_config.php: " . $e->getMessage());
     echo json_encode(['success' => false, 'message' => 'Erreur de configuration. Contactez l\'administrateur.']);
@@ -88,12 +89,7 @@ if ($action === 'login') {
         error_log("Session set for user: " . $user['id']);
         
         
-        $redirect = '../user/dashboard.php'; 
-        if ($user['role'] === 'administrateur') {
-            $redirect = '../admin/dashboard.php';
-        } elseif ($user['role'] === 'gestionnaire') {
-            $redirect = '../gestionnaire/dashboard.php';
-        }
+        $redirect = getDashboardPathForRole($user['role']);
         
         echo json_encode([
             'success' => true, 
