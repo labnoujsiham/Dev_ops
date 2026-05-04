@@ -12,7 +12,7 @@ pipeline {
         stage('Construction') {
             steps {
                 echo 'Construction de l\'image Docker en cours...'
-                sh 'docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .'
+                sh 'docker build --no-cache -t ${DOCKER_IMAGE}:${DOCKER_TAG} .'
             }
         }
 
@@ -40,8 +40,8 @@ pipeline {
         stage('Déploiement') {
             steps {
                 echo 'Déploiement vers Kubernetes en cours...'
-                sh 'kubectl apply -f k8s/deployment.yaml'
-                sh 'kubectl apply -f k8s/service.yaml'
+                sh 'kubectl apply -f deploiement/deployment.yaml'
+                sh 'kubectl apply -f deploiement/service.yaml'
             }
         }
 
