@@ -40,9 +40,10 @@ pipeline {
         stage('Déploiement') {
             steps {
                 withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]) {
-                echo 'Déploiement vers Kubernetes en cours...'
-                sh 'kubectl apply -f deploiement/deployment.yaml'
-                sh 'kubectl apply -f deploiement/service.yaml'
+                    echo 'Déploiement vers Kubernetes en cours...'
+                    sh 'kubectl apply -f deploiement/deployment.yaml'
+                    sh 'kubectl apply -f deploiement/service.yaml'
+                }
             }
         }
 
