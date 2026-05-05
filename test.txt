@@ -1,1 +1,1 @@
-On va ajouter un fichier pour que le pipeline se lancerr
+On va ajouter un fichier pour que le pipeline se   lancer
