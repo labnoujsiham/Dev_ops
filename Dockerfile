@@ -3,7 +3,7 @@ FROM php:8.3-apache
 
 # Install PHP extensions and Composer for the test stage
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git unzip \
+    && apt-get install -y --no-install-recommends git unzip libzip-dev \
     && docker-php-ext-install mysqli pdo pdo_mysql zip \
     && rm -rf /var/lib/apt/lists/*
 
