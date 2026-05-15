@@ -17,6 +17,7 @@ spec:
       containers:
       - name: devops-app
         image: labnoujsiham/devops-app:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         env:
