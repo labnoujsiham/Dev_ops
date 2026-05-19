@@ -1,6 +1,6 @@
 <?php
 
-
+//comment
 require_once 'db_config.php';
 
 $pdo = getDBConnection();
