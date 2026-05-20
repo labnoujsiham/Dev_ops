@@ -242,8 +242,8 @@ INSERT IGNORE INTO `statuts` (`cle`, `libelle`) VALUES
 ('attente_info_reclamant', 'En attente d\'informations');
 
 -- 5. Index pour performances
-CREATE INDEX IF NOT EXISTS idx_commentaires_type ON commentaires(type_commentaire, date_commentaire);
-CREATE INDEX IF NOT EXISTS idx_notifications_type ON notifications(type, lu, date_creation);
+CREATE INDEX idx_commentaires_type ON commentaires(type_commentaire, date_commentaire);
+CREATE INDEX idx_notifications_type ON notifications(type, lu, date_creation);
 
 -- Vérification
 SELECT 'Ajouts SQL terminés avec succès !' AS statut;
