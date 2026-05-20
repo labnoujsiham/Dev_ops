@@ -16,7 +16,7 @@ spec:
         kubernetes.io/hostname: minikube-m02
       containers:
       - name: devops-app
-        image: labnoujsiham/devops-app:latest
+        image: labnoujsiham/devops-app:1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
